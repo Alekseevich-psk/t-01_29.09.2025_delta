@@ -1,0 +1,16 @@
+@use "~/styles/base" as *;
+
+.main {
+
+    &__title {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        user-select: none;
+    }
+
+    &__wrapper {
+        overflow-x: auto;
+    }
+
+}

@@ -1,0 +1,21 @@
+section.main#main
+    .main__container.container
+        .main__title Тестовое задание Delta 
+        .main__wrapper 
+            .main__table.table
+                .table__header
+                    .table__cell Показатель
+                    .table__cell Текущий день
+                    .table__cell Вчера
+                    .table__cell Этот день недели
+                .table__body
+                    for item, index in dataTable
+                        .table__row
+                            .table__cell=item.title
+                            .table__cell.table__cell--today=item.today
+                            .table__cell.table__cell--yesterday
+                                span.table__yesterday-value=item.yesterday 
+                                span.table__diff-value 5%
+                            .table__cell=item.weekDay
+                            div(id=`chart-${index}`).table__cell.table__cell--chart
+                                button(type="button").table__btn-close

@@ -1,0 +1,1 @@
+import './../sections/main/main';

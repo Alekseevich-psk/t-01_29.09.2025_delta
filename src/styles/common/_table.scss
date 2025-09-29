@@ -1,0 +1,137 @@
+@use "./../base" as *;
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+        min-width: 768px;
+
+    &__header {
+        display: flex;
+
+        .table__cell {
+            text-align: center;
+            font-weight: 600;
+            color: #333;
+
+            &:nth-child(3) {
+                display: block;
+            }
+        }
+    }
+
+    &__body {
+        .table__cell {
+
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                &:hover {
+                    cursor: pointer;
+                    background-color: #ddd9ff;
+                }
+
+                &.active {
+                    background-color: #ff8282;
+                }
+            }
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__cell {
+        border: 1px solid #ddd;
+        padding: 12px 16px;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 16px;
+        user-select: none;
+
+        &:first-child {
+            width: 40%;
+            background-color: #F5F5F5;
+        }
+
+        &:nth-child(2) {
+            background-color: #EDF8FF;
+        }
+
+        &:nth-child(3) {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ECF7E7;
+
+            span {
+                &:nth-child(2) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &:nth-child(4) {
+            background-color: #F5F5F5;
+        }
+
+        &:nth-child(n + 2) {
+            width: 20%;
+        }
+
+        &--chart {
+            position: relative;
+            width: 100% !important;
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+            padding: 0;
+            margin: 0;
+            border: none;
+
+            &.active {
+                height: auto;
+                opacity: 1;
+                visibility: visible;
+                padding: 12px;
+                border: 1px solid #ddd;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    top: 50%;
+                    left: 50%;
+                    width: 60px;
+                    height: 60px;
+                    opacity: 0.5;
+                    background: url('/public/svg/preloader.svg') no-repeat center / contain;
+                }
+            }
+        }
+
+    }
+
+    &__btn-close {
+        position: absolute;
+        cursor: pointer;
+        opacity: 0.6;
+        user-select: none;
+        top: 0;
+        right: 20px;
+        width: 22px;
+        height: 22px;
+        background: url('/public/svg/close.svg') no-repeat center / contain;
+        transition: 0.2s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
