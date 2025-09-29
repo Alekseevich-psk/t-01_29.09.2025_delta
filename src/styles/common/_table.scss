@@ -4,7 +4,7 @@
     width: 100%;
     border-collapse: collapse;
     overflow-x: auto;
-        min-width: 768px;
+    min-width: 768px;
 
     &__header {
         display: flex;
@@ -26,6 +26,8 @@
             &:nth-child(2),
             &:nth-child(3),
             &:nth-child(4) {
+                text-align: right;
+
                 &:hover {
                     cursor: pointer;
                     background-color: #ddd9ff;
