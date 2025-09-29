@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap">
+    <title>Тестовое задание №1</title>
+    <script defer src="./js/scripts.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body> 
+    <section class="main" id="main">
+      <div class="main__container container">
+        <div class="main__title">Тестовое задание Delta </div>
+        <div class="main__wrapper"> 
+          <div class="main__table table">
+            <div class="table__header">
+              <div class="table__cell">Показатель</div>
+              <div class="table__cell">Текущий день</div>
+              <div class="table__cell">Вчера</div>
+              <div class="table__cell">Этот день недели</div>
+            </div>
+            <div class="table__body">
+              <div class="table__row">
+                <div class="table__cell">Выручка, руб</div>
+                <div class="table__cell table__cell--today">1 200 000</div>
+                <div class="table__cell table__cell--yesterday"><span class="table__yesterday-value">1 100 000</span><span class="table__diff-value">5%</span></div>
+                <div class="table__cell">1 000 000</div>
+                <div class="table__cell table__cell--chart" id="chart-0">
+                  <button class="table__btn-close" type="button"></button>
+                </div>
+              </div>
+              <div class="table__row">
+                <div class="table__cell">Наличные</div>
+                <div class="table__cell table__cell--today">400 000</div>
+                <div class="table__cell table__cell--yesterday"><span class="table__yesterday-value">380 000</span><span class="table__diff-value">5%</span></div>
+                <div class="table__cell">350 000</div>
+                <div class="table__cell table__cell--chart" id="chart-1">
+                  <button class="table__btn-close" type="button"></button>
+                </div>
+              </div>
+              <div class="table__row">
+                <div class="table__cell">Безналичный расчет</div>
+                <div class="table__cell table__cell--today">500 000</div>
+                <div class="table__cell table__cell--yesterday"><span class="table__yesterday-value">480 000</span><span class="table__diff-value">5%</span></div>
+                <div class="table__cell">450 000</div>
+                <div class="table__cell table__cell--chart" id="chart-2">
+                  <button class="table__btn-close" type="button"></button>
+                </div>
+              </div>
+              <div class="table__row">
+                <div class="table__cell">Кредитные карты</div>
+                <div class="table__cell table__cell--today">300 000</div>
+                <div class="table__cell table__cell--yesterday"><span class="table__yesterday-value">290 000</span><span class="table__diff-value">5%</span></div>
+                <div class="table__cell">280 000</div>
+                <div class="table__cell table__cell--chart" id="chart-3">
+                  <button class="table__btn-close" type="button"></button>
+                </div>
+              </div>
+              <div class="table__row">
+                <div class="table__cell">Средний чек, руб</div>
+                <div class="table__cell table__cell--today">1 000</div>
+                <div class="table__cell table__cell--yesterday"><span class="table__yesterday-value">980</span><span class="table__diff-value">5%</span></div>
+                <div class="table__cell">950</div>
+                <div class="table__cell table__cell--chart" id="chart-4">
+                  <button class="table__btn-close" type="button"></button>
+                </div>
+              </div>
+              <div class="table__row">
+                <div class="table__cell">Средний гость, руб</div>
+                <div class="table__cell table__cell--today">1 000</div>
+                <div class="table__cell table__cell--yesterday"><span class="table__yesterday-value">980</span><span class="table__diff-value">5%</span></div>
+                <div class="table__cell">950</div>
+                <div class="table__cell table__cell--chart" id="chart-5">
+                  <button class="table__btn-close" type="button"></button>
+                </div>
+              </div>
+              <div class="table__row">
+                <div class="table__cell">Удаление из чека (После оплаты), руб</div>
+                <div class="table__cell table__cell--today">50 000</div>
+                <div class="table__cell table__cell--yesterday"><span class="table__yesterday-value">45 000</span><span class="table__diff-value">5%</span></div>
+                <div class="table__cell">40 000</div>
+                <div class="table__cell table__cell--chart" id="chart-6">
+                  <button class="table__btn-close" type="button"></button>
+                </div>
+              </div>
+              <div class="table__row">
+                <div class="table__cell">Удаление из чека (До оплаты), руб</div>
+                <div class="table__cell table__cell--today">30 000</div>
+                <div class="table__cell table__cell--yesterday"><span class="table__yesterday-value">28 000</span><span class="table__diff-value">5%</span></div>
+                <div class="table__cell">25 000</div>
+                <div class="table__cell table__cell--chart" id="chart-7">
+                  <button class="table__btn-close" type="button"></button>
+                </div>
+              </div>
+              <div class="table__row">
+                <div class="table__cell">Количество чеков</div>
+                <div class="table__cell table__cell--today">1 200</div>
+                <div class="table__cell table__cell--yesterday"><span class="table__yesterday-value">1 150</span><span class="table__diff-value">5%</span></div>
+                <div class="table__cell">1 100</div>
+                <div class="table__cell table__cell--chart" id="chart-8">
+                  <button class="table__btn-close" type="button"></button>
+                </div>
+              </div>
+              <div class="table__row">
+                <div class="table__cell">Количество гостей</div>
+                <div class="table__cell table__cell--today">1 200</div>
+                <div class="table__cell table__cell--yesterday"><span class="table__yesterday-value">1 150</span><span class="table__diff-value">5%</span></div>
+                <div class="table__cell">1 100</div>
+                <div class="table__cell table__cell--chart" id="chart-9">
+                  <button class="table__btn-close" type="button"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
