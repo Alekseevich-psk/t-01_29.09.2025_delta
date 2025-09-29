@@ -11,7 +11,7 @@ section.main#main
                 .table__body
                     for item, index in dataTable
                         .table__row
-                            .table__cell=item.title
+                            .table__cell.table__cell--title=item.title
                             .table__cell.table__cell--today=item.today
                             .table__cell.table__cell--yesterday
                                 span.table__yesterday-value=item.yesterday 

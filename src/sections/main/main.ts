@@ -94,6 +94,8 @@ import zingchart from "zingchart";
 
             el.addEventListener('click', (event) => {
                 if (event.target instanceof HTMLElement) {
+
+                    if (event.target.classList.contains("table__cell--title")) return;
                     closeWrapperCharts();
 
                     if (wrapChart !== null) {
